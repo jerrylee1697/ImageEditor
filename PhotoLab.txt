@@ -1,0 +1,40 @@
+* Name: Jerry Lee  *
+* SID: 95436717    *
+* Assignment: 4    *
+* Date: 11/23/2017  *
+====================
+
+Programs Functionality:
+This program is an extension of the previous 2 weeks program,
+implementing four additional functions and allowing the program
+to accept dynamically sized pictures. 
+
+Function Implementations:
+General   - All functions were reimplemented to be able to work with
+            any sized photo using pointers. Our previously used 2-D
+            arrays are changed into a 1-D array as pointers and
+            each point is calculated accordingly to pinpoint its pixel
+            location in the photo. 
+
+Crop      - The function takes the point from which the picture will
+            be cropped and how much of it will be. I have added extra
+            constraints so that if the desired cropping is larger
+            than available in the picture, it will automatically crop
+            the maximum size it can from the chosen point.
+
+Resize    - The picture is recreated based on the selected percentage,
+            then using the formulas, is able to recreate the picture
+            larger or smaller without looking different besides
+            pixel quality.
+            
+Brightness And Contrast - The function is able to take percentages 
+            and adjust each pixel density accordingly based on
+            the provided formulas.
+
+Watermark - The watermark simply iterates through all the pixels in 
+            both the original image and the watermark sample. If it
+            detects whitespace in the watermark, it will alter the 
+            original photos pixel density at the same point to 
+            show the watermark. Using modula, the watermark will be
+            written again if the original picture is larger.
+
